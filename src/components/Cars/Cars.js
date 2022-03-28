@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cars.css';
+import Car from '../Car/car';
 const Cars = () => {
     const cars = [
         { id: 1, Name: 'Toyota', price: 20000000 },
@@ -16,6 +17,9 @@ const Cars = () => {
         <div className='cars-container'>
             <div className="cards-containers">
                 <h3>this is for cars</h3>
+                {
+                    cars.map(car => <Car key={car.id}></Car>)
+                }
             </div>
             <div className="choose-container">
                 <h3>choose randomly</h3>
